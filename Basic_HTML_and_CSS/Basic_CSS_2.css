@@ -5,3 +5,9 @@ p {
 	text-align: right;
 	text-shadow: 1px 2px blue;
 }
+ul {
+	list-style-type: square;
+}
+ol {
+	list-style-type: upper-alpha;
+}
