@@ -4,9 +4,14 @@ This is a collection of sample websites that I made using HTML and CSS.
 
 ## Projects
 
+* Airedale Website
 * Brewery Website
 * Movie Theater Site
 * Portfolio Site
+
+### Airedale Website
+
+This is a basic page written with html.
 
 ### Brewery Website
 
