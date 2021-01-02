@@ -14,9 +14,10 @@
         <!-- Navbar -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a class="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
         <br>
         <br>
@@ -42,6 +43,55 @@
                     <br>
                 </p>
             </strong>
+        </div>
+
+        <!-- Slideshow section-->
+        <div id="Slideshow">
+            <div id="Slideshow_Backgound">
+                <div id="Slideshow_Container">
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1 / 5</div>
+                        <img class="Slide_Show_Images" src="Images/Renee.jpg" style="width:100%">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2 / 5</div>
+                        <img class="Slide_Show_Images" src="Images/HTML_CSS_and_JavaScript.jpg" style="width:100%">
+                        <div class="text">I am a full-stack software developer, <br> trained in: <br> HTML, CSS, Javascript,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3 / 5</div>
+                        <img class="Slide_Show_Images" src="Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+                        <div class="text">C#, .NET Framework, ASP.Net, MVC,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4 / 5</div>
+                        <img class="Slide_Show_Images" src="Images/SQL_and_Database.jpg" style="width:100%">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">5 / 5</div>
+                        <img class="Slide_Show_Images" src="Images/Coding_1.jpg" style="width:100%">
+                        <div class="text"><a onclick="openForm()" href="#Contact">Contact me now!</a></div>
+                    </div>
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style = "text-align:center">
+                    <span class="dot" onlclick="currentSlide(1)"></span>
+                    <span class="dot" onlclick="currentSlide(2)"></span>
+                    <span class="dot" onlclick="currentSlide(3)"></span>
+                    <span class="dot" onlclick="currentSlide(4)"></span>
+                    <span class="dot" onlclick="currentSlide(5)"></span>
+                </div>
+            </div>
         </div>
 
         <!-- About section-->
@@ -81,22 +131,19 @@
         </div>
 
         <!-- Contact Section -->
-        <div class="Row" id="Contact">
-            <!-- Contact image, left column -->
-            <div class="Column_2 Column_tall">
-                <img src="Images/Keyboard.jpg" alt="Keyboard">
-            </div>
-            <!-- Contact Form, right column -->
-            <div class="Column_1 Column_tall">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">Contact</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xvovwkbw" method="POST" class="form-container">
                 <h1>Contact</h1>
-                <form action="https://formspree.io/f/xvovwkbw" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                    <label for="name"><b>Name:</b></label>
+                        <input type="text" placeholder="Type your name here" name="name">
+                    <label for="email"><b>Email:</b></label>
+                        <input type="text" placeholder="Type your email address here" name="email">
+                    <label for="message">Message:</label>
+                        <input type="text" placeholder="Type your message here" name="message">
+                    <button type="submit" class="btn">SUBMIT</button>    
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
@@ -104,9 +151,11 @@
         <!-- Footer section -->
         <footer>
             <p>
-                <p class="center">&copy Renee Call</p>
+                <center>&copy Renee Call</center>
                 <br>
             </p>
         </footer>
+
+        <script src="JS/Portfolio.js"></script>
     </body>
 </html>
